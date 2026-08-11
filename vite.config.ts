@@ -6,14 +6,6 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   build: {
-    chunkSizeWarningLimit: 1000,
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          firebase: ['firebase/app', 'firebase/firestore', 'firebase/storage'],
-          vendor: ['react', 'react-dom', 'framer-motion', 'lucide-react']
-        }
-      }
-    }
+    chunkSizeWarningLimit: 1500
   }
 })
