@@ -22,3 +22,11 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Agent and IDE directories
+.agents/
+.gemini/
+.cursor/
+.claude/
+.opencode/
+.codex/

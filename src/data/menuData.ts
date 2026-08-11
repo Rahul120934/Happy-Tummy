@@ -1,3 +1,14 @@
+import type { ElementType } from "react";
+import {
+  Fish,
+  Carrot,
+  CookingPot,
+  UtensilsCrossed,
+  Pizza,
+  Soup,
+  ConciergeBell
+} from "lucide-react";
+
 export type Badge = "BEST SELLER" | "NEW";
 
 export interface MenuItem {
@@ -11,7 +22,7 @@ export interface MenuItem {
 export interface MenuCategory {
   id: string;
   name: string;
-  emoji: string;
+  icon: ElementType;
   items: MenuItem[];
 }
 
@@ -19,7 +30,7 @@ export const menuCategories: MenuCategory[] = [
   {
     id: "goan",
     name: "Goan Delicacies",
-    emoji: "🦐",
+    icon: Fish,
     items: [
       {
         name: "Chicken Xacuti",
@@ -68,7 +79,7 @@ export const menuCategories: MenuCategory[] = [
   {
     id: "veg",
     name: "Veg Delicacies",
-    emoji: "🥬",
+    icon: Carrot,
     items: [
       {
         name: "Dal Tadka",
@@ -129,7 +140,7 @@ export const menuCategories: MenuCategory[] = [
   {
     id: "biryani",
     name: "Biryani",
-    emoji: "🍚",
+    icon: CookingPot,
     items: [
       {
         name: "Chicken Dum Biryani",
@@ -155,7 +166,7 @@ export const menuCategories: MenuCategory[] = [
   {
     id: "pulao",
     name: "Pulao",
-    emoji: "🍛",
+    icon: UtensilsCrossed,
     items: [
       {
         name: "Mixed Veg Pulao",
@@ -180,7 +191,7 @@ export const menuCategories: MenuCategory[] = [
   {
     id: "pizza",
     name: "Pizza",
-    emoji: "🍕",
+    icon: Pizza,
     items: [
       {
         name: "Veggie Delight",
@@ -224,7 +235,7 @@ export const menuCategories: MenuCategory[] = [
   {
     id: "ramen",
     name: "Ramen",
-    emoji: "🍜",
+    icon: Soup,
     items: [
       {
         name: "Cheese Flavoured Ramen",
@@ -257,7 +268,7 @@ export const menuCategories: MenuCategory[] = [
   {
     id: "tiffin",
     name: "Tiffin Meals",
-    emoji: "🥘",
+    icon: ConciergeBell,
     items: [
       {
         name: "Veg Tiffin Meal",
