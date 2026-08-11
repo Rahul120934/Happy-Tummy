@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Poppins:wght@300;400;500;600;700&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #FBF3E4;
+  --color-cream-dark: #F0E6D0;
+  --color-dark: #1A1712;
+  --color-dark-card: #252017;
+  --color-dark-card-hover: #2F291F;
+  --color-orange: #E8A33D;
+  --color-orange-hover: #D4912E;
+  --color-orange-light: #F5C46A;
+  --color-green: #3F6B35;
+  --color-green-light: #5A8E4E;
+  --color-red: #B23A2E;
+  --color-red-light: #D4483A;
+  --color-charcoal: #2A2620;
+  --color-offwhite: #F5EFE3;
+  --color-muted: #8A8278;
+  --color-muted-light: #B8AFA3;
+
+  --font-heading: "Kalam", cursive;
+  --font-body: "Poppins", sans-serif;
+}
+
+/* Removed wildcard reset - Tailwind preflight handles this */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-charcoal);
+  background-color: var(--color-cream);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ===== Scrollbar Styling ===== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-orange);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-orange-hover);
+}
+
+/* ===== Selection ===== */
+::selection {
+  background: var(--color-orange);
+  color: var(--color-dark);
+}
+
+/* ===== Utility Classes ===== */
+.section-cream {
+  background-color: var(--color-cream);
+  color: var(--color-charcoal);
+}
+
+.section-dark {
+  background-color: var(--color-dark);
+  color: var(--color-offwhite);
+}
+
+/* Safe area for mobile sticky bar */
+.safe-area-bottom {
+  padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+}
+
+/* ===== Animations ===== */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(232, 163, 61, 0.4); }
+  50% { box-shadow: 0 0 20px 10px rgba(232, 163, 61, 0); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  background-size: 200% auto;
+  animation: shimmer 3s linear infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
